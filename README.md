@@ -13,7 +13,8 @@ CDNSAdmin is a web-based administration interface for managing a CoreDNS deploym
    python app.py
    ```
 
-After starting, open `http://localhost:5000` in your browser to verify the application is running.
+After starting, open `http://<server-ip>:5000` in your browser to verify the application is running.
+The server listens on `0.0.0.0` by default so it is reachable from your LAN.
 
 ## Zone management API
 
