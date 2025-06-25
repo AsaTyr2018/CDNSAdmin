@@ -1,0 +1,3 @@
+# Ignore coreDNS binary archives
+*.tgz
+__pycache__/
