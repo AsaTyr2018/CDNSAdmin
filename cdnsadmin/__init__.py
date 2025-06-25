@@ -1,9 +1,11 @@
 from flask import Flask
+import os
 
 
 def create_app():
     """Create and configure the Flask application."""
-    app = Flask(__name__)
+    template_dir = os.path.join(os.path.dirname(__file__), '..', 'templates')
+    app = Flask(__name__, template_folder=template_dir)
     app.config['SECRET_KEY'] = 'change-me'
     
     # Register blueprints for modular functionality
