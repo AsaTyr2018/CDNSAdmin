@@ -36,3 +36,20 @@ a backend. Use the `/connect` endpoint to configure this server:
 * `GET /connect/` – retrieve the currently configured backend connection.
 
 The connection configuration is saved in `data/config.json`.
+
+## Automated installation
+
+For a system-wide deployment, run the provided `setup.sh` script. It copies the
+repository to `/opt/CDNSAdmin` and installs the Python requirements in a
+virtual environment:
+
+```bash
+sudo ./setup.sh
+```
+
+After installation activate the environment and start the application:
+
+```bash
+source /opt/CDNSAdmin/venv/bin/activate
+python /opt/CDNSAdmin/app.py
+```
