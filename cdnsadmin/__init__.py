@@ -9,10 +9,12 @@ def create_app():
     from . import zones
     from . import corefile
     from . import plugins
+    from . import backend
 
     app.register_blueprint(zones.bp)
     app.register_blueprint(corefile.bp)
     app.register_blueprint(plugins.bp)
+    app.register_blueprint(backend.bp)
 
     @app.route('/')
     def index():

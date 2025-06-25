@@ -25,3 +25,14 @@ The first management module allows basic CRUD operations for zones. All routes a
 * `POST /zones/<name>/enable` – toggle zone activation with JSON `{ "enabled": true }`.
 
 Zone information is stored in `data/zones.json` and can be edited via the API.
+
+## Backend connection API
+
+CDNSAdmin can store the address of a real CoreDNS server that should be used as
+a backend. Use the `/connect` endpoint to configure this server:
+
+* `POST /connect/` – set the backend host and optional port with JSON
+  `{ "host": "1.2.3.4", "port": 1053 }`.
+* `GET /connect/` – retrieve the currently configured backend connection.
+
+The connection configuration is saved in `data/config.json`.
